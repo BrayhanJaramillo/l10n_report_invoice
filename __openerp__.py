@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-# Copyright (C) 2016 MARLON FALCON HDEZ (<http://www.marlonfalcon.cl>).
-# contact: contacto@marlonfalcon.cl
+# Copyright (C) 2017
+# contact: brayhanjaramilo@hotmail.com
 
 ######################################################################
 
@@ -24,7 +24,7 @@ Con este modulo se podra personalizar la factura del cliente.
     'license' : 'AGPL-3',
     'depends': ['sale','base_setup', 'product', 'analytic', 'report'],
     'data': [
-        'cubareport_view.xml',
+        'report_invoice_inherit.xml',
     ],
     'installable': True,
     'active': False,
