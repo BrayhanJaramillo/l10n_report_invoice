@@ -30,9 +30,16 @@ from datetime import datetime
 import logging
 _logger = logging.getLogger(__name__)
 
-class AccountInvoice(models.Model):
+class Template_invoice(models.Model):
 
-	_name = 'account.invoice'
-	_inherit = 'account.invoice'
+	_description = 'Modelo que permite la creacion de plantillas para mensajes en las facturas de los clientes'
+	_name = 'template.invoice'
+	_rec_name='name'
 
+	name = fields.Char(String='Nombre Plantilla', required=True, help="Nombre de la plantilla, la cual es laquese escogera en la factura para la impresion de la misma.")
+	description = fields.Text(String='Descripcón de la Plantilla', required=True, help="Descripción de la plantilla, la cual es la que saldra en la impresion del reporte.")
 	
+	@api.constrains('name')
+	def chequear_hora(self):
+		_logger.info(self)
+		_logger.info(self.name)

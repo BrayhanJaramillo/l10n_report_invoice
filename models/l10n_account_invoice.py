@@ -35,4 +35,4 @@ class AccountInvoice(models.Model):
 	_name = 'account.invoice'
 	_inherit = 'account.invoice'
 
-	
+	template_invoice_id = fields.Many2one('template.invoice', string='Plantilla Reporte', help='Con esta plantilla podra modificar el reporte de una manera dinámica')

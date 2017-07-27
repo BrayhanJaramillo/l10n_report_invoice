@@ -24,7 +24,8 @@ Con este modulo se podra personalizar la factura del cliente.
     'license' : 'AGPL-3',
     'depends': ['sale','base_setup', 'product', 'analytic', 'report'],
     'data': [
-        'report_invoice_inherit.xml',
+        'views/l10n_account_invoice.xml',
+        'report/report_invoice_inherit.xml',
     ],
     'installable': True,
     'active': False,
