@@ -20,17 +20,7 @@
 
             </div>
 
-            <div style="color: #9a9a9a; 17px;" class="row">
 
-                <div class="col-xs-12" style="margin-left:">
-                Autorización DIAN número:
-                <span t-field="o.resolution_number" /> <br />
-                Fecha de Autorización: <span t-field="o.resolution_date" />
-                <t t-if="o.resolution_date_to"> | Vigencia de Autorización: <span t-field="o.resolution_date_to" /> |</t> 
-                     Rango de Facturación: <span t-field="o.resolution_number_from" /> - <span t-field="o.resolution_number_to" />
-                </div>
-
-            </div>
 
             <div class="row">
 
