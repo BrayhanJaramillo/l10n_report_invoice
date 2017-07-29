@@ -2,23 +2,39 @@
 <openerp>
     <data>
 
-    <!-- Inherit view account invoice-->
-    <record model="ir.ui.view" id="view_account_invoice_form">
-      <field name="model">account.invoice</field>
-      <field name="inherit_id" ref="account.invoice_form"/>
-      <field name="arch" type="xml">
-        
-          <xpath expr="//field[@name='payment_term_id']" position="after">
-            <field name="template_invoice_id" class="oe_inline">
-              <form>
-                <field name="name"/>
-                <field name="description"/>
-              </form>
-            </field>
-          </xpath>
+      <!-- Inherit view account invoice-->
+      <record model="ir.ui.view" id="view_account_invoice_form">
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+          
+            <xpath expr="//field[@name='payment_term_id']" position="after">
+              <field name="template_invoice_id">
+                <form>
+                  <group col="2">
+                    <field name="name"/>
+                    <field name="description"/>
+                  </group>
+                </form>
+              </field>
+            </xpath>
 
-      </field>
-    </record>
+        </field>
+      </record>
+
+
+      <record model="ir.ui.view" id="view_template_report_invoice_form">
+          <field name="name">Plantilla Reporte</field>
+          <field name="model">template.invoice</field>
+          <field name="arch" type="xml">
+              <form string="Plantilla Reporte">
+                  <group colspan='3' col='2'>
+                    <field name="name"/>
+                    <field name="description"/>
+                  </group>
+              </form>
+          </field>
+      </record>
 
     </data>
 </openerp>

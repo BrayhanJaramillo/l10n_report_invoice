@@ -36,8 +36,8 @@ class Template_invoice(models.Model):
 	_name = 'template.invoice'
 	_rec_name='name'
 
-	name = fields.Char(String='Nombre Plantilla', required=True, help="Nombre de la plantilla, la cual es laquese escogera en la factura para la impresion de la misma.")
-	description = fields.Text(String='Descripcón de la Plantilla', required=True, help="Descripción de la plantilla, la cual es la que saldra en la impresion del reporte.")
+	name = fields.Char('Nombre Plantilla', required=True, help="Nombre de la plantilla, la cual es laquese escogera en la factura para la impresion de la misma.")
+	description = fields.Text('Descripcón de la Plantilla', required=True, help="Descripción de la plantilla, la cual es la que saldra en la impresion del reporte.")
 	
 	@api.constrains('name')
 	def chequear_hora(self):
