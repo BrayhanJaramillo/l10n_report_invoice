@@ -20,10 +20,19 @@
 
             </div>
 
+            <div style="color: #9a9a9a; 17px;" class="row">
 
+                <div class="col-xs-12" style="margin-left:">
+                Autorización DIAN número:
+                <span t-field="o.resolution_number" /> <br />
+                Fecha de Autorización: <span t-field="o.resolution_date" />
+                <t t-if="o.resolution_date_to"> | Vigencia de Autorización: <span t-field="o.resolution_date_to" /> |</t> 
+                     Rango de Facturación: <span t-field="o.resolution_number_from" /> - <span t-field="o.resolution_number_to" />
+                </div>
+
+            </div>
 
             <div class="row">
-
                 <div class="col-xs-4">
                     <h3><p><strong>FECHA DE FACTURACIÓN:</strong></p></h3>
                     <p t-field="o.date_invoice"/>
@@ -31,11 +40,11 @@
                  
                  <div class="col-xs-4">
                     <center>
-                    <h3><strong><span style="color: #0066CC;">FACTURA DE VENTA</span></strong></h3>
-                    <h2 style="color: #0066CC;"><strong>N°<span  t-field="o.number"/></strong></h2>
-                    <p><span>Responsable de IVA – REGIMEN COMUN</span></p>
-                    <p><span>Res. Fact. DIAN No. 320001334023</span></p>
-                    <p>Nit: <span t-field="o.partner_id.company_id.partner_id.formatedNit"/></p>
+                        <h3><strong><span style="color: #0066CC;">FACTURA DE VENTA</span></strong></h3>
+                        <h2 style="color: #0066CC;"><strong>N°<span  t-field="o.number"/></strong></h2>
+                        <br/><span>Responsable de IVA – REGIMEN COMUN</span>
+                        <br/><span>Res. Fact. DIAN No. 320001334023</span>
+                        <br/>Nit: <span t-field="o.partner_id.company_id.partner_id.formatedNit"/>
                     </center>
                 </div>
 
